@@ -22,11 +22,17 @@ namespace Metody11
             char[] separotor = { ' ' };
             string[] poleSlov = s.Split(separotor, StringSplitOptions.RemoveEmptyEntries);
 
-            for(int i = 0; i < s.Length; i++)
+            int i = 0;
+            while(i < s.Length)
             {
                 if(Char.IsDigit(s[i]))
                 {
                     s = s.Remove(i, 1);
+                    
+                }
+                else
+                {
+                    i++;
                 }
             }
 
